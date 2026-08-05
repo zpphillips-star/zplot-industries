@@ -18,7 +18,7 @@
   --color-border:      rgba(255,255,255,.08);
   --color-text:        #E8EAF0;
   --color-muted:       #7B8098;
-  --color-accent-def:  #6366F1; /* indigo fallback */
+  --color-accent-def:  #6366F1; /* indigo */
 
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
@@ -87,8 +87,36 @@ a {
   z-index: 1;
 }
 
+/* ─── Logo lockup (mark + wordmark text) ─────────────────── */
+.logo-lockup {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(.65rem, 2vw, 1.1rem);
+}
+
+/* The inline SVG mark */
+.logo-mark {
+  width:  clamp(2.5rem, 7vw, 3.5rem);
+  height: clamp(2.5rem, 7vw, 3.5rem);
+  flex-shrink: 0;
+  /* Subtle glow on the mark that matches the accent */
+  filter: drop-shadow(0 0 10px rgba(99,102,241,.30));
+  transition: filter var(--dur) ease;
+}
+
+.logo-lockup:hover .logo-mark,
+.logo-lockup:focus-within .logo-mark {
+  filter: drop-shadow(0 0 18px rgba(99,102,241,.55));
+}
+
+/* Text side of lockup */
+.logo-text {
+  text-align: left;
+}
+
 .wordmark {
-  font-size: clamp(2rem, 7vw, 4rem);
+  font-size: clamp(1.85rem, 6.5vw, 3.75rem);
   font-weight: 700;
   letter-spacing: -.03em;
   line-height: 1;
@@ -103,13 +131,12 @@ a {
 }
 
 .wordmark-industries {
-  display: block;
-  font-size: clamp(.85rem, 2.5vw, 1.1rem);
+  font-size: clamp(.7rem, 2vw, .95rem);
   font-weight: 400;
   letter-spacing: .25em;
   text-transform: uppercase;
   color: var(--color-muted);
-  margin-top: var(--space-xs);
+  margin-top: .15rem;
 }
 
 .tagline {
@@ -151,10 +178,8 @@ main {
 
 @media (min-width: 800px) {
   .card-grid {
-    /* 3 cols but last odd card expands */
     grid-template-columns: repeat(3, 1fr);
   }
-  /* If 7 cards: last card (7th) spans 1 col — looks fine at 3/3/1 */
 }
 
 /* ─── Card ───────────────────────────────────────────────── */
@@ -223,7 +248,6 @@ main {
   opacity: .65;
 }
 
-/* Allow focus but not navigation */
 .card--todo[href="#"] {
   pointer-events: auto;
   cursor: default;

@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Z-Plot Industries — a collection of apps and projects by Zach Phillips" />
   <title>Z-Plot Industries</title>
+
+  <!-- SVG favicon (modern browsers); falls back to browser default for older ones -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="alternate icon" href="favicon.svg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -15,10 +20,58 @@
   <!-- ═══════════════════════════════════════════ HEADER -->
   <header class="site-header">
     <div class="header-inner">
-      <div class="wordmark">
-        <span class="wordmark-z">Z</span><span class="wordmark-plot">-Plot</span>
-        <span class="wordmark-industries">Industries</span>
-      </div>
+
+      <!-- Logo lockup: SVG mark + wordmark text -->
+      <div class="logo-lockup">
+
+        <!-- Inline SVG mark — dotted Z on a grid/card -->
+        <svg class="logo-mark"
+             xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 48 48"
+             fill="none"
+             aria-hidden="true"
+             focusable="false">
+          <!-- Card background -->
+          <rect x="1" y="1" width="46" height="46" rx="9"
+                fill="#12141A"
+                stroke="rgba(255,255,255,0.12)"
+                stroke-width="1.5"/>
+          <!-- Subtle 3×3 grid -->
+          <g stroke="rgba(255,255,255,0.07)" stroke-width="1">
+            <line x1="9"  y1="17" x2="39" y2="17"/>
+            <line x1="9"  y1="24" x2="39" y2="24"/>
+            <line x1="9"  y1="31" x2="39" y2="31"/>
+            <line x1="17" y1="9"  x2="17" y2="39"/>
+            <line x1="24" y1="9"  x2="24" y2="39"/>
+            <line x1="31" y1="9"  x2="31" y2="39"/>
+          </g>
+          <!-- Z path — 3 dotted segments (round linecap + 0-length dash = circles) -->
+          <line x1="12" y1="12" x2="36" y2="12"
+                stroke="#6366F1" stroke-width="2.5" stroke-linecap="round"
+                stroke-dasharray="0 5.5"/>
+          <line x1="36" y1="12" x2="12" y2="36"
+                stroke="#6366F1" stroke-width="2.5" stroke-linecap="round"
+                stroke-dasharray="0 5.5"/>
+          <line x1="12" y1="36" x2="36" y2="36"
+                stroke="#6366F1" stroke-width="2.5" stroke-linecap="round"
+                stroke-dasharray="0 5.5"/>
+          <!-- Corner nodes (larger anchor dots at each Z vertex) -->
+          <circle cx="12" cy="12" r="3"   fill="#6366F1"/>
+          <circle cx="36" cy="12" r="3"   fill="#6366F1"/>
+          <circle cx="12" cy="36" r="3"   fill="#6366F1"/>
+          <circle cx="36" cy="36" r="3"   fill="#6366F1"/>
+        </svg>
+
+        <!-- Wordmark text -->
+        <div class="logo-text">
+          <div class="wordmark">
+            <span class="wordmark-z">Z</span><span class="wordmark-plot">-Plot</span>
+          </div>
+          <div class="wordmark-industries">Industries</div>
+        </div>
+
+      </div><!-- /logo-lockup -->
+
       <p class="tagline">Apps &amp; projects by Zach Phillips</p>
     </div>
     <div class="header-glow" aria-hidden="true"></div>
@@ -112,24 +165,14 @@
   </footer>
 
   <script>
-    // Set year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Accent color on hover via CSS custom property
     document.querySelectorAll('.card[data-accent]').forEach(card => {
       const accent = card.dataset.accent;
-      card.addEventListener('mouseenter', () => {
-        card.style.setProperty('--accent', accent);
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.removeProperty('--accent');
-      });
-      card.addEventListener('focus', () => {
-        card.style.setProperty('--accent', accent);
-      });
-      card.addEventListener('blur', () => {
-        card.style.removeProperty('--accent');
-      });
+      card.addEventListener('mouseenter', () => card.style.setProperty('--accent', accent));
+      card.addEventListener('mouseleave', () => card.style.removeProperty('--accent'));
+      card.addEventListener('focus',      () => card.style.setProperty('--accent', accent));
+      card.addEventListener('blur',       () => card.style.removeProperty('--accent'));
     });
   </script>
 </body>
