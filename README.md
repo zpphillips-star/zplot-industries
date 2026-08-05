@@ -10,14 +10,17 @@ Plain HTML5 + CSS custom properties. No build step, no npm, no framework. Edit a
 
 ## App links
 
+Canonical public domains are used where available. Vercel deployment URLs are retained only where no separate public domain has been confirmed.
+
+
 | App | URL | Status |
 |-----|-----|--------|
 | TrueStar | https://truestar.vercel.app | ✅ Live |
-| Hallowed Hop Society | https://hhs-app-gilt.vercel.app | ✅ Live |
-| Family Fables | https://familyfables.vercel.app | ✅ Live |
+| Hallowed Hop Society | https://hallowedhopsociety.com | ✅ Live |
+| Family Fables | https://familyfables.org | ✅ Live |
 | Woodinville | *(TBD — no repo detected)* | 🚧 TODO |
-| CastWA | https://castwa.vercel.app | ✅ Live |
-| Scorpanion | https://scorpanion.vercel.app | ✅ Live |
+| CastWA | https://castwa.com | ✅ Live |
+| Scorpanion | https://scorpanion.com | ✅ Live |
 | WCScores | https://world-cup-2026-gray.vercel.app | ✅ Live |
 
 > **Woodinville app URL** — no repo was found under `zpphillips-star` at time of site creation. Update the `href` in `index.html` and remove the `card--todo` class when the app is ready.
