@@ -3,176 +3,596 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Z-Plot Industries — a collection of apps and projects by Zach Phillips" />
-  <title>Z-Plot Industries</title>
+  <meta name="description" content="Z-Plot Industries — an independent software studio building apps people actually use. From craft beer discovery to live sports scores, we craft digital experiences for real life." />
+  <meta name="theme-color" content="#0A0B0F" />
 
-  <!-- SVG favicon (modern browsers); falls back to browser default for older ones -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Z-Plot Industries — Apps Built for Real Life" />
+  <meta property="og:description" content="Independent software studio crafting apps that matter — sports scores, craft beer, family stories, fishing guides, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://zplotindustries.com" />
+
+  <title>Z-Plot Industries — Apps Built for Real Life</title>
+
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="alternate icon" href="favicon.svg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════════ HEADER -->
-  <header class="site-header">
-    <div class="header-inner">
-
-      <!-- Logo lockup: SVG mark + wordmark text -->
-      <div class="logo-lockup">
-
-        <!-- Inline SVG mark — dotted Z on a grid/card -->
-        <svg class="logo-mark"
-             xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 48 48"
-             fill="none"
-             aria-hidden="true"
-             focusable="false">
-          <!-- Card background -->
-          <rect x="1" y="1" width="46" height="46" rx="9"
-                fill="#12141A"
-                stroke="rgba(255,255,255,0.12)"
-                stroke-width="1.5"/>
-          <!-- Subtle 3×3 grid -->
-          <g stroke="rgba(255,255,255,0.07)" stroke-width="1">
-            <line x1="9"  y1="17" x2="39" y2="17"/>
-            <line x1="9"  y1="24" x2="39" y2="24"/>
-            <line x1="9"  y1="31" x2="39" y2="31"/>
-            <line x1="17" y1="9"  x2="17" y2="39"/>
-            <line x1="24" y1="9"  x2="24" y2="39"/>
-            <line x1="31" y1="9"  x2="31" y2="39"/>
-          </g>
-          <!-- Z path — 3 dotted segments (round linecap + 0-length dash = circles) -->
-          <line x1="12" y1="12" x2="36" y2="12"
-                stroke="#6366F1" stroke-width="2.5" stroke-linecap="round"
-                stroke-dasharray="0 5.5"/>
-          <line x1="36" y1="12" x2="12" y2="36"
-                stroke="#6366F1" stroke-width="2.5" stroke-linecap="round"
-                stroke-dasharray="0 5.5"/>
-          <line x1="12" y1="36" x2="36" y2="36"
-                stroke="#6366F1" stroke-width="2.5" stroke-linecap="round"
-                stroke-dasharray="0 5.5"/>
-          <!-- Corner nodes (larger anchor dots at each Z vertex) -->
-          <circle cx="12" cy="12" r="3"   fill="#6366F1"/>
-          <circle cx="36" cy="12" r="3"   fill="#6366F1"/>
-          <circle cx="12" cy="36" r="3"   fill="#6366F1"/>
-          <circle cx="36" cy="36" r="3"   fill="#6366F1"/>
-        </svg>
-
-        <!-- Wordmark text -->
-        <div class="logo-text">
-          <div class="wordmark">
-            <span class="wordmark-z">Z</span><span class="wordmark-plot">-Plot</span>
-          </div>
-          <div class="wordmark-industries">Industries</div>
-        </div>
-
-      </div><!-- /logo-lockup -->
-
-      <p class="tagline">Apps &amp; projects by Zach Phillips</p>
+  <!-- ══════════════════════════════════════════ NAV -->
+  <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Z-Plot Industries — home">
+        <img src="assets/zplot-solo.png" alt="Z-Plot Industries mark" class="nav-logo-img" width="32" height="32" />
+        <span class="nav-wordmark"><span class="nav-z">Z</span>-Plot</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="mailto:zach@zplotindustries.com" class="nav-cta">Get In Touch</a></li>
+      </ul>
+      <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div class="header-glow" aria-hidden="true"></div>
-  </header>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="#apps">Apps</a>
+      <a href="#about">About</a>
+      <a href="mailto:zach@zplotindustries.com">Get In Touch</a>
+    </div>
+  </nav>
 
-  <!-- ═══════════════════════════════════════════ MAIN -->
-  <main>
-    <section class="apps-section">
-      <h2 class="section-label">Our Apps</h2>
+  <!-- ══════════════════════════════════════════ HERO -->
+  <section class="hero" id="hero" aria-label="Hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-orb hero-orb--1"></div>
+      <div class="hero-orb hero-orb--2"></div>
+      <div class="hero-orb hero-orb--3"></div>
+      <div class="hero-grid"></div>
+    </div>
 
-      <div class="card-grid">
-
-        <!-- TrueStar -->
-        <a class="card" href="https://truestar.vercel.app" target="_blank" rel="noopener" data-accent="#F59E0B">
-          <div class="card-icon" aria-hidden="true">⭐</div>
-          <div class="card-body">
-            <h3 class="card-title">TrueStar</h3>
-            <p class="card-desc">Restaurant ratings built around what <em>you</em> care about — not the crowd.</p>
-          </div>
-          <span class="card-arrow" aria-hidden="true">→</span>
-        </a>
-
-        <!-- Hallowed Hop Society -->
-        <a class="card" href="https://hallowedhopsociety.com" target="_blank" rel="noopener" data-accent="#7C3AED">
-          <div class="card-icon" aria-hidden="true">🍺</div>
-          <div class="card-body">
-            <h3 class="card-title">Hallowed Hop Society</h3>
-            <p class="card-desc">31 Beers of October — craft beer discovery and tracking for the season.</p>
-          </div>
-          <span class="card-arrow" aria-hidden="true">→</span>
-        </a>
-
-        <!-- Family Fables -->
-        <a class="card" href="https://familyfables.org" target="_blank" rel="noopener" data-accent="#10B981">
-          <div class="card-icon" aria-hidden="true">📖</div>
-          <div class="card-body">
-            <h3 class="card-title">Family Fables</h3>
-            <p class="card-desc">Capture and share your family's stories, memories, and milestones.</p>
-          </div>
-          <span class="card-arrow" aria-hidden="true">→</span>
-        </a>
-
-        <!-- Woodinville App — TODO: URL not yet confirmed -->
-        <a class="card card--todo" href="#" data-accent="#3B82F6" aria-describedby="woodinville-note">
-          <div class="card-icon" aria-hidden="true">🌲</div>
-          <div class="card-body">
-            <h3 class="card-title">Woodinville <span class="badge">Coming Soon</span></h3>
-            <p class="card-desc">Your guide to Woodinville — wine country, events, and local life.</p>
-            <p class="card-note" id="woodinville-note">Link will be added when app launches.</p>
-          </div>
-          <span class="card-arrow" aria-hidden="true">→</span>
-        </a>
-
-        <!-- CastWA -->
-        <a class="card" href="https://castwa.com" target="_blank" rel="noopener" data-accent="#06B6D4">
-          <div class="card-icon" aria-hidden="true">🎣</div>
-          <div class="card-body">
-            <h3 class="card-title">CastWA</h3>
-            <p class="card-desc">Washington fishing companion — spots, conditions, and regulations at your fingertips.</p>
-          </div>
-          <span class="card-arrow" aria-hidden="true">→</span>
-        </a>
-
-        <!-- Scorpanion -->
-        <a class="card" href="https://scorpanion.com" target="_blank" rel="noopener" data-accent="#EF4444">
-          <div class="card-icon" aria-hidden="true">🏆</div>
-          <div class="card-body">
-            <h3 class="card-title">Scorpanion</h3>
-            <p class="card-desc">Live scores and sports tracking — your loyal companion for every game.</p>
-          </div>
-          <span class="card-arrow" aria-hidden="true">→</span>
-        </a>
-
-        <!-- WCScores / World Cup 2026 -->
-        <a class="card" href="https://world-cup-2026-gray.vercel.app" target="_blank" rel="noopener" data-accent="#F97316">
-          <div class="card-icon" aria-hidden="true">⚽</div>
-          <div class="card-body">
-            <h3 class="card-title">WCScores</h3>
-            <p class="card-desc">2026 FIFA World Cup companion PWA — fixtures, scores, and standings.</p>
-          </div>
-          <span class="card-arrow" aria-hidden="true">→</span>
-        </a>
-
+    <div class="hero-content">
+      <div class="hero-logo-wrap">
+        <img
+          src="assets/zplot-word.png"
+          alt="Z-Plot Industries"
+          class="hero-logo"
+          width="480"
+          height="320"
+        />
       </div>
-    </section>
+
+      <div class="hero-eyebrow">
+        <span class="pill">Independent Software Studio</span>
+        <span class="pill pill--dim">Washington State, USA</span>
+      </div>
+
+      <h1 class="hero-headline">
+        Apps built for<br />
+        <span class="hero-headline--accent">real life.</span>
+      </h1>
+
+      <p class="hero-sub">
+        We don't build for VCs or trend reports. We build the apps <em>we</em> wanted — and make them good enough for everyone else. Live sports. Craft beer. Family memories. Local life. Real things that matter.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#apps" class="btn btn--primary">Explore Our Apps</a>
+        <a href="#about" class="btn btn--ghost">Our Story →</a>
+      </div>
+
+      <div class="hero-stats" aria-label="Key stats">
+        <div class="stat">
+          <span class="stat-num">7</span>
+          <span class="stat-label">Apps</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">4</span>
+          <span class="stat-label">Platforms</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">1</span>
+          <span class="stat-label">Studio</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">∞</span>
+          <span class="stat-label">Coffee</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#apps" class="scroll-hint" aria-label="Scroll to apps">
+      <span class="scroll-hint-text">See our apps</span>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M10 4v12M5 11l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- ══════════════════════════════════════════ APPS -->
+  <main id="apps">
+    <div class="section-header">
+      <div class="overline">Portfolio</div>
+      <h2 class="section-title">Every app, a real problem solved.</h2>
+      <p class="section-sub">Built by one developer, refined through real use, and shipped with pride. No bloat. No dark patterns. Just tools that work.</p>
+    </div>
+
+    <div class="apps-grid">
+
+      <!-- ── SCORPANION ─────────────────────────────────────── -->
+      <article class="app-card" data-accent="#EF4444" id="scorpanion">
+        <div class="app-card-inner">
+          <div class="app-card-top">
+            <div class="app-logo-wrap">
+              <img src="assets/scorpanion-icon.png" alt="Scorpanion" class="app-logo" width="72" height="72" loading="lazy" />
+            </div>
+            <div class="app-meta">
+              <span class="app-badge app-badge--live">Live</span>
+              <span class="app-platform">Web · iOS · Android</span>
+            </div>
+          </div>
+          <h3 class="app-name">Scorpanion</h3>
+          <p class="app-tagline">Your loyal companion for every game.</p>
+          <p class="app-desc">
+            Never lose track of a game again. Scorpanion delivers live scores, standings, and real-time updates across major sports leagues — wrapped in a clean, lightning-fast interface designed to stay out of your way and keep you in the action.
+          </p>
+          <ul class="app-features" aria-label="Key features">
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Live scores across NFL, NBA, MLB, NHL &amp; more
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Clean standings, schedules &amp; game-by-game breakdowns
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Built as a Progressive Web App — instant on any device
+            </li>
+          </ul>
+          <a href="https://scorpanion.com" target="_blank" rel="noopener" class="app-cta">
+            Open Scorpanion
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="app-card-glow" aria-hidden="true"></div>
+      </article>
+
+      <!-- ── HALLOWED HOP SOCIETY ─────────────────────────── -->
+      <article class="app-card" data-accent="#F59E0B" id="hhs">
+        <div class="app-card-inner">
+          <div class="app-card-top">
+            <div class="app-logo-wrap">
+              <img src="assets/hhs-icon.png" alt="Hallowed Hop Society" class="app-logo" width="72" height="72" loading="lazy" />
+            </div>
+            <div class="app-meta">
+              <span class="app-badge app-badge--live">Live</span>
+              <span class="app-platform">Web · Android</span>
+            </div>
+          </div>
+          <h3 class="app-name">Hallowed Hop Society</h3>
+          <p class="app-tagline">31 Beers of October — a craft beer adventure.</p>
+          <p class="app-desc">
+            Every October, beer lovers take the challenge: 31 beers, 31 days, 31 stories. Hallowed Hop Society is the app that makes it legendary — track your haul, discover local craft brews, share tasting notes with the Society, and see how your palate stacks up against the community.
+          </p>
+          <ul class="app-features" aria-label="Key features">
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Track &amp; rate every beer across your October challenge
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Discover curated North Washington craft selections
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Community leaderboards, tasting wall &amp; shared notes
+            </li>
+          </ul>
+          <a href="https://hallowedhopsociety.com" target="_blank" rel="noopener" class="app-cta">
+            Join the Society
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="app-card-glow" aria-hidden="true"></div>
+      </article>
+
+      <!-- ── FAMILY FABLES ──────────────────────────────────── -->
+      <article class="app-card" data-accent="#10B981" id="familyfables">
+        <div class="app-card-inner">
+          <div class="app-card-top">
+            <div class="app-logo-wrap app-logo-wrap--svg">
+              <svg class="app-logo-svg" viewBox="0 0 72 72" fill="none" aria-hidden="true" width="72" height="72">
+                <rect width="72" height="72" rx="16" fill="#064E3B"/>
+                <path d="M18 22h36M18 31h28M18 40h32M18 49h24" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="52" cy="22" r="6" fill="#10B981"/>
+                <path d="M49 22l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="app-meta">
+              <span class="app-badge app-badge--live">Live</span>
+              <span class="app-platform">Web · iOS · Android</span>
+            </div>
+          </div>
+          <h3 class="app-name">Family Fables</h3>
+          <p class="app-tagline">Your family's stories, safe and searchable forever.</p>
+          <p class="app-desc">
+            The best stories are the ones never written down — until now. Family Fables gives families a private, beautiful space to capture memories, record milestones, and build a living archive of their legacy. Because one day, your grandkids will want to know.
+          </p>
+          <ul class="app-features" aria-label="Key features">
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Capture stories, photos &amp; milestones in one timeline
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Private family sharing — your data stays yours
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              AI-assisted writing to help the stories flow naturally
+            </li>
+          </ul>
+          <a href="https://familyfables.org" target="_blank" rel="noopener" class="app-cta">
+            Start Your Story
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="app-card-glow" aria-hidden="true"></div>
+      </article>
+
+      <!-- ── CASTWA ──────────────────────────────────────────── -->
+      <article class="app-card" data-accent="#06B6D4" id="castwa">
+        <div class="app-card-inner">
+          <div class="app-card-top">
+            <div class="app-logo-wrap">
+              <img src="assets/castwa-icon.png" alt="CastWA" class="app-logo" width="72" height="72" loading="lazy" />
+            </div>
+            <div class="app-meta">
+              <span class="app-badge app-badge--live">Live</span>
+              <span class="app-platform">iOS · Android</span>
+            </div>
+          </div>
+          <h3 class="app-name">CastWA</h3>
+          <p class="app-tagline">Washington fishing — every spot, every rule, at your fingertips.</p>
+          <p class="app-desc">
+            Washington State has some of the best fishing in North America, and some of the most complex regulations to match. CastWA puts the whole picture in your pocket — find productive spots, check current conditions, and stay legal — so you spend less time in the rulebook and more time on the water.
+          </p>
+          <ul class="app-features" aria-label="Key features">
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Interactive map of fishing spots statewide
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              WDFW regulations, seasons &amp; limits — always current
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Species guides for 50+ Washington fish &amp; shellfish
+            </li>
+          </ul>
+          <a href="https://castwa.com" target="_blank" rel="noopener" class="app-cta">
+            Find Your Spot
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="app-card-glow" aria-hidden="true"></div>
+      </article>
+
+      <!-- ── TRUESTAR ────────────────────────────────────────── -->
+      <article class="app-card" data-accent="#F59E0B" id="truestar">
+        <div class="app-card-inner">
+          <div class="app-card-top">
+            <div class="app-logo-wrap app-logo-wrap--svg">
+              <svg class="app-logo-svg" viewBox="0 0 72 72" fill="none" aria-hidden="true" width="72" height="72">
+                <rect width="72" height="72" rx="16" fill="#1C1500"/>
+                <polygon points="36,12 40.5,27 56,27 43.5,36 48,51 36,42 24,51 28.5,36 16,27 31.5,27" fill="#F59E0B"/>
+              </svg>
+            </div>
+            <div class="app-meta">
+              <span class="app-badge app-badge--live">Live</span>
+              <span class="app-platform">Web</span>
+            </div>
+          </div>
+          <h3 class="app-name">TrueStar</h3>
+          <p class="app-tagline">Restaurant ratings built around what <em>you</em> care about.</p>
+          <p class="app-desc">
+            The crowd doesn't always know best. TrueStar flips the script on restaurant ratings — instead of following the herd, you define what matters: vibe, service, value, or the perfect burger. Rate on your terms, discover on yours. Finally, a dining guide that actually fits your taste.
+          </p>
+          <ul class="app-features" aria-label="Key features">
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Personalized rating criteria — rate what matters to you
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Discover restaurants matched to your actual preferences
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Build a personal dining record you'll actually revisit
+            </li>
+          </ul>
+          <a href="https://truestar.vercel.app" target="_blank" rel="noopener" class="app-cta">
+            Rate Your Table
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="app-card-glow" aria-hidden="true"></div>
+      </article>
+
+      <!-- ── WCSCORES ────────────────────────────────────────── -->
+      <article class="app-card" data-accent="#F97316" id="wcscores">
+        <div class="app-card-inner">
+          <div class="app-card-top">
+            <div class="app-logo-wrap">
+              <img src="assets/wcscores-icon.png" alt="WCScores" class="app-logo" width="72" height="72" loading="lazy" />
+            </div>
+            <div class="app-meta">
+              <span class="app-badge app-badge--live">Live</span>
+              <span class="app-platform">Web · PWA</span>
+            </div>
+          </div>
+          <h3 class="app-name">WCScores</h3>
+          <p class="app-tagline">The ultimate 2026 FIFA World Cup companion.</p>
+          <p class="app-desc">
+            The biggest sporting event on earth deserves a companion app that matches the moment. WCScores is a beautiful, fast Progressive Web App built for the 2026 FIFA World Cup — with live scores, group standings, knockout brackets, and every fixture from every stadium, in real time.
+          </p>
+          <ul class="app-features" aria-label="Key features">
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Live scores &amp; minute-by-minute match updates
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Full group stage standings &amp; knockout bracket
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Installable PWA — works offline, loads instantly
+            </li>
+          </ul>
+          <a href="https://world-cup-2026-gray.vercel.app" target="_blank" rel="noopener" class="app-cta">
+            Follow the Cup
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="app-card-glow" aria-hidden="true"></div>
+      </article>
+
+      <!-- ── WOODINVILLE ──────────────────────────────────────── -->
+      <article class="app-card app-card--soon" data-accent="#3B82F6" id="woodinville">
+        <div class="app-card-inner">
+          <div class="app-card-top">
+            <div class="app-logo-wrap app-logo-wrap--svg">
+              <svg class="app-logo-svg" viewBox="0 0 72 72" fill="none" aria-hidden="true" width="72" height="72">
+                <rect width="72" height="72" rx="16" fill="#0F1B2D"/>
+                <!-- Tree -->
+                <polygon points="36,14 50,38 22,38" fill="#22C55E"/>
+                <polygon points="36,22 52,44 20,44" fill="#16A34A"/>
+                <rect x="31" y="44" width="10" height="12" rx="2" fill="#78350F"/>
+                <!-- Wine glass hint -->
+                <path d="M54 16c0 4-2 6-4 8h8c-2-2-4-4-4-8z" fill="#8B5CF6" opacity="0.7"/>
+                <rect x="53" y="24" width="2" height="6" fill="#8B5CF6" opacity="0.7"/>
+                <path d="M51 30h6" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+              </svg>
+            </div>
+            <div class="app-meta">
+              <span class="app-badge app-badge--soon">Coming Soon</span>
+              <span class="app-platform">iOS · Android · Web</span>
+            </div>
+          </div>
+          <h3 class="app-name">Woodinville</h3>
+          <p class="app-tagline">The insider's guide to Washington wine country.</p>
+          <p class="app-desc">
+            Woodinville is 100+ wineries, world-class restaurants, and a lifestyle packed into one valley. This app brings it all together — tasting room hours, event calendars, local favorites, and the hidden gems the regulars don't tell visitors about. Coming in 2026.
+          </p>
+          <ul class="app-features" aria-label="Key features">
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Complete Woodinville winery &amp; tasting room directory
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Local events, food pairings &amp; seasonal picks
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Plan your perfect day trip with turn-by-turn routing
+            </li>
+          </ul>
+          <span class="app-cta app-cta--disabled" aria-disabled="true">
+            Launching in 2026
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M3 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+        <div class="app-card-glow" aria-hidden="true"></div>
+      </article>
+
+    </div><!-- /apps-grid -->
   </main>
 
-  <!-- ═══════════════════════════════════════════ FOOTER -->
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Z-Plot Industries &nbsp;·&nbsp; Made with ☕ in Washington</p>
+  <!-- ══════════════════════════════════════════ PHILOSOPHY -->
+  <section class="philosophy" id="about" aria-label="About Z-Plot Industries">
+    <div class="philosophy-inner">
+      <div class="philosophy-text">
+        <div class="overline">About the Studio</div>
+        <h2 class="philosophy-headline">
+          Small studio.<br />No shortcuts.
+        </h2>
+        <p>
+          Z-Plot Industries is one developer — Zach Phillips — building apps from the Pacific Northwest with an obsessive focus on craft. No funding rounds. No growth hacks. Just real problems, real solutions, and software that earns its place on your home screen.
+        </p>
+        <p>
+          Every app we ship starts from a place of genuine need. We were the frustrated fisherman who couldn't navigate WDFW regulations on mobile. We were the beer lover who wanted a real October challenge tracker. We were the parent who realized family memories were disappearing into the cloud, unsorted and unloved.
+        </p>
+        <p>
+          We build the apps we wished existed. Then we make them good enough for everyone.
+        </p>
+        <div class="philosophy-values">
+          <div class="value">
+            <span class="value-icon">🎯</span>
+            <div>
+              <strong>Purpose-Driven</strong>
+              <p>Every feature exists because it solves something real. We don't pad for the sake of it.</p>
+            </div>
+          </div>
+          <div class="value">
+            <span class="value-icon">🔒</span>
+            <div>
+              <strong>Privacy First</strong>
+              <p>Your data is yours. We don't sell it, we don't broker it, we don't even want it.</p>
+            </div>
+          </div>
+          <div class="value">
+            <span class="value-icon">⚡</span>
+            <div>
+              <strong>Performance Obsessed</strong>
+              <p>Apps that feel slow are apps people stop using. We sweat every millisecond.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="philosophy-visual" aria-hidden="true">
+        <div class="logo-display">
+          <img src="assets/zplot-solo.png" alt="" class="logo-display-img" width="200" height="200" />
+          <div class="logo-display-ring logo-display-ring--1"></div>
+          <div class="logo-display-ring logo-display-ring--2"></div>
+          <div class="logo-display-ring logo-display-ring--3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════ PLATFORMS -->
+  <section class="platforms" aria-label="Available platforms">
+    <div class="platforms-inner">
+      <div class="overline">Available On</div>
+      <h2 class="platforms-title">Wherever you are, we're there.</h2>
+      <div class="platform-badges">
+        <div class="platform-badge">
+          <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.54 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.56-1.701z"/>
+          </svg>
+          <span>App Store</span>
+        </div>
+        <div class="platform-badge">
+          <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3.18 23.76c.3.17.64.26 1 .26.35 0 .71-.09 1.03-.28l12.4-7.17-2.93-2.93-11.5 10.12zM.1 1.5C.04 1.74 0 2 0 2.28v19.44c0 .28.04.54.1.8l12.03-12.03L.1 1.5zm21.6 9.07l-2.82-1.63-3.21 3.2 3.21 3.21 2.84-1.64c.81-.47.81-1.67-.02-2.14zM4.18.27L16.6 7.44l-2.94 2.94L.16.46A2.07 2.07 0 0 1 1.18 0c.36 0 .72.09 1.01.27h2l-.01-.01z"/>
+          </svg>
+          <span>Google Play</span>
+        </div>
+        <div class="platform-badge">
+          <svg class="platform-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span>Web</span>
+        </div>
+        <div class="platform-badge">
+          <svg class="platform-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+            <path d="M12 18h.01"/>
+          </svg>
+          <span>PWA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════ FOOTER -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/zplot-solo.png" alt="Z-Plot Industries" class="footer-logo" width="36" height="36" loading="lazy" />
+        <div>
+          <div class="footer-name"><span class="nav-z">Z</span>-Plot Industries</div>
+          <div class="footer-tagline">Made with ☕ in Washington State</div>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-col">
+          <h3>Apps</h3>
+          <ul role="list">
+            <li><a href="https://scorpanion.com" target="_blank" rel="noopener">Scorpanion</a></li>
+            <li><a href="https://hallowedhopsociety.com" target="_blank" rel="noopener">Hallowed Hop Society</a></li>
+            <li><a href="https://familyfables.org" target="_blank" rel="noopener">Family Fables</a></li>
+            <li><a href="https://castwa.com" target="_blank" rel="noopener">CastWA</a></li>
+            <li><a href="https://truestar.vercel.app" target="_blank" rel="noopener">TrueStar</a></li>
+            <li><a href="https://world-cup-2026-gray.vercel.app" target="_blank" rel="noopener">WCScores</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Studio</h3>
+          <ul role="list">
+            <li><a href="#about">About</a></li>
+            <li><a href="mailto:zach@zplotindustries.com">Contact</a></li>
+            <li><a href="https://github.com/zpphillips-star" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Z-Plot Industries &nbsp;·&nbsp; All rights reserved</p>
+    </div>
   </footer>
 
   <script>
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    document.querySelectorAll('.card[data-accent]').forEach(card => {
+    // Nav scroll behaviour
+    const nav = document.getElementById('site-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // Mobile burger
+    const burger = document.querySelector('.nav-burger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    burger.addEventListener('click', () => {
+      const open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!open));
+      mobileMenu.hidden = open;
+      burger.classList.toggle('open', !open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        burger.setAttribute('aria-expanded', 'false');
+        mobileMenu.hidden = true;
+        burger.classList.remove('open');
+      });
+    });
+
+    // App card accent glow on hover
+    document.querySelectorAll('.app-card[data-accent]').forEach(card => {
       const accent = card.dataset.accent;
-      card.addEventListener('mouseenter', () => card.style.setProperty('--accent', accent));
-      card.addEventListener('mouseleave', () => card.style.removeProperty('--accent'));
-      card.addEventListener('focus',      () => card.style.setProperty('--accent', accent));
-      card.addEventListener('blur',       () => card.style.removeProperty('--accent'));
+      const glow = card.querySelector('.app-card-glow');
+      if (glow) glow.style.setProperty('--glow-color', accent);
+      card.style.setProperty('--accent', accent);
+    });
+
+    // Intersection Observer — fade-in cards
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.app-card, .stat, .value, .platform-badge').forEach(el => {
+      observer.observe(el);
     });
   </script>
 </body>
