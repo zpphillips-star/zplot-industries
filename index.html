@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Z-Plot Industries — a collection of apps and projects by Zach Phillips" />
+  <title>Z-Plot Industries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════ HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="wordmark">
+        <span class="wordmark-z">Z</span><span class="wordmark-plot">-Plot</span>
+        <span class="wordmark-industries">Industries</span>
+      </div>
+      <p class="tagline">Apps &amp; projects by Zach Phillips</p>
+    </div>
+    <div class="header-glow" aria-hidden="true"></div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════ MAIN -->
+  <main>
+    <section class="apps-section">
+      <h2 class="section-label">Our Apps</h2>
+
+      <div class="card-grid">
+
+        <!-- TrueStar -->
+        <a class="card" href="https://truestar.vercel.app" target="_blank" rel="noopener" data-accent="#F59E0B">
+          <div class="card-icon" aria-hidden="true">⭐</div>
+          <div class="card-body">
+            <h3 class="card-title">TrueStar</h3>
+            <p class="card-desc">Restaurant ratings built around what <em>you</em> care about — not the crowd.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- Hallowed Hop Society -->
+        <a class="card" href="https://hhs-app-gilt.vercel.app" target="_blank" rel="noopener" data-accent="#7C3AED">
+          <div class="card-icon" aria-hidden="true">🍺</div>
+          <div class="card-body">
+            <h3 class="card-title">Hallowed Hop Society</h3>
+            <p class="card-desc">31 Beers of October — craft beer discovery and tracking for the season.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- Family Fables -->
+        <a class="card" href="https://familyfables.vercel.app" target="_blank" rel="noopener" data-accent="#10B981">
+          <div class="card-icon" aria-hidden="true">📖</div>
+          <div class="card-body">
+            <h3 class="card-title">Family Fables</h3>
+            <p class="card-desc">Capture and share your family's stories, memories, and milestones.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- Woodinville App — TODO: URL not yet confirmed -->
+        <a class="card card--todo" href="#" data-accent="#3B82F6" aria-describedby="woodinville-note">
+          <div class="card-icon" aria-hidden="true">🌲</div>
+          <div class="card-body">
+            <h3 class="card-title">Woodinville <span class="badge">Coming Soon</span></h3>
+            <p class="card-desc">Your guide to Woodinville — wine country, events, and local life.</p>
+            <p class="card-note" id="woodinville-note">Link will be added when app launches.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- CastWA -->
+        <a class="card" href="https://castwa.vercel.app" target="_blank" rel="noopener" data-accent="#06B6D4">
+          <div class="card-icon" aria-hidden="true">🎣</div>
+          <div class="card-body">
+            <h3 class="card-title">CastWA</h3>
+            <p class="card-desc">Washington fishing companion — spots, conditions, and regulations at your fingertips.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- Scorpanion -->
+        <a class="card" href="https://scorpanion.vercel.app" target="_blank" rel="noopener" data-accent="#EF4444">
+          <div class="card-icon" aria-hidden="true">🏆</div>
+          <div class="card-body">
+            <h3 class="card-title">Scorpanion</h3>
+            <p class="card-desc">Live scores and sports tracking — your loyal companion for every game.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- WCScores / World Cup 2026 -->
+        <a class="card" href="https://world-cup-2026-gray.vercel.app" target="_blank" rel="noopener" data-accent="#F97316">
+          <div class="card-icon" aria-hidden="true">⚽</div>
+          <div class="card-body">
+            <h3 class="card-title">WCScores</h3>
+            <p class="card-desc">2026 FIFA World Cup companion PWA — fixtures, scores, and standings.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════ FOOTER -->
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Z-Plot Industries &nbsp;·&nbsp; Made with ☕ in Washington</p>
+  </footer>
+
+  <script>
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Accent color on hover via CSS custom property
+    document.querySelectorAll('.card[data-accent]').forEach(card => {
+      const accent = card.dataset.accent;
+      card.addEventListener('mouseenter', () => {
+        card.style.setProperty('--accent', accent);
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.removeProperty('--accent');
+      });
+      card.addEventListener('focus', () => {
+        card.style.setProperty('--accent', accent);
+      });
+      card.addEventListener('blur', () => {
+        card.style.removeProperty('--accent');
+      });
+    });
+  </script>
+</body>
+</html>

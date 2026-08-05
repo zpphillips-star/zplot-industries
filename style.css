@@ -1,0 +1,339 @@
+/* ═══════════════════════════════════════════════════════════
+   Z-Plot Industries — style.css
+   Mobile-first, no framework, custom properties throughout
+════════════════════════════════════════════════════════════ */
+
+/* ─── Reset & base ──────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Brand palette */
+  --color-bg:          #0A0B0F;
+  --color-surface:     #12141A;
+  --color-surface-2:   #1A1D26;
+  --color-border:      rgba(255,255,255,.08);
+  --color-text:        #E8EAF0;
+  --color-muted:       #7B8098;
+  --color-accent-def:  #6366F1; /* indigo fallback */
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Spacing */
+  --space-xs:   .375rem;
+  --space-sm:   .75rem;
+  --space-md:   1.25rem;
+  --space-lg:   2rem;
+  --space-xl:   3rem;
+  --space-2xl:  5rem;
+
+  /* Radii */
+  --radius-sm:  .5rem;
+  --radius-md:  1rem;
+  --radius-lg:  1.5rem;
+
+  /* Transitions */
+  --ease: cubic-bezier(.22,.68,0,1.2);
+  --dur:  220ms;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ─── Header ─────────────────────────────────────────────── */
+.site-header {
+  position: relative;
+  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  text-align: center;
+  overflow: hidden;
+}
+
+.header-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% -10%,
+    rgba(99,102,241,.35) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.header-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.wordmark {
+  font-size: clamp(2rem, 7vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -.03em;
+  line-height: 1;
+}
+
+.wordmark-z {
+  color: #6366F1;
+}
+
+.wordmark-plot {
+  color: var(--color-text);
+}
+
+.wordmark-industries {
+  display: block;
+  font-size: clamp(.85rem, 2.5vw, 1.1rem);
+  font-weight: 400;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-top: var(--space-xs);
+}
+
+.tagline {
+  font-size: clamp(.8rem, 2vw, .95rem);
+  color: var(--color-muted);
+  margin-top: var(--space-sm);
+}
+
+/* ─── Main / section ─────────────────────────────────────── */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md) var(--space-2xl);
+}
+
+.section-label {
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: var(--space-lg);
+}
+
+/* ─── Card grid ──────────────────────────────────────────── */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 560px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  .card-grid {
+    /* 3 cols but last odd card expands */
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* If 7 cards: last card (7th) spans 1 col — looks fine at 3/3/1 */
+}
+
+/* ─── Card ───────────────────────────────────────────────── */
+.card {
+  --accent: var(--color-accent-def);
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition:
+    transform var(--dur) var(--ease),
+    box-shadow var(--dur) ease,
+    border-color var(--dur) ease,
+    background var(--dur) ease;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 0% 0%,
+    color-mix(in srgb, var(--accent) 18%, transparent) 0%,
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity var(--dur) ease;
+  pointer-events: none;
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+  box-shadow:
+    0 8px 32px color-mix(in srgb, var(--accent) 20%, transparent),
+    0 2px 8px rgba(0,0,0,.4);
+  background: var(--color-surface-2);
+  outline: none;
+}
+
+.card:hover::before,
+.card:focus-visible::before {
+  opacity: 1;
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.card:active {
+  transform: translateY(-1px);
+}
+
+/* ─── Card — todo / coming soon state ───────────────────── */
+.card--todo {
+  cursor: default;
+  pointer-events: none;
+  opacity: .65;
+}
+
+/* Allow focus but not navigation */
+.card--todo[href="#"] {
+  pointer-events: auto;
+  cursor: default;
+}
+
+.card--todo:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--color-border);
+  background: var(--color-surface);
+}
+
+.card--todo:hover::before {
+  opacity: 0;
+}
+
+/* ─── Card internals ─────────────────────────────────────── */
+.card-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: .1rem;
+  filter: drop-shadow(0 0 8px color-mix(in srgb, var(--accent) 50%, transparent));
+  transition: filter var(--dur) ease;
+}
+
+.card:hover .card-icon,
+.card:focus-visible .card-icon {
+  filter: drop-shadow(0 0 14px color-mix(in srgb, var(--accent) 80%, transparent));
+}
+
+.card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+.card-desc {
+  font-size: .82rem;
+  color: var(--color-muted);
+  margin-top: .3rem;
+  line-height: 1.5;
+}
+
+.card-desc em {
+  color: var(--color-text);
+  font-style: normal;
+}
+
+.card-note {
+  font-size: .75rem;
+  color: color-mix(in srgb, var(--color-muted) 70%, transparent);
+  margin-top: .4rem;
+  font-style: italic;
+}
+
+.card-arrow {
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  flex-shrink: 0;
+  align-self: center;
+  transition: transform var(--dur) var(--ease), color var(--dur) ease;
+  margin-left: auto;
+}
+
+.card:hover .card-arrow,
+.card:focus-visible .card-arrow {
+  transform: translateX(4px);
+  color: var(--accent);
+}
+
+/* ─── Badge ──────────────────────────────────────────────── */
+.badge {
+  font-size: .6rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .15em .5em;
+  border-radius: 99px;
+  background: rgba(255,255,255,.08);
+  color: var(--color-muted);
+  border: 1px solid rgba(255,255,255,.1);
+  vertical-align: middle;
+}
+
+/* ─── Footer ─────────────────────────────────────────────── */
+.site-footer {
+  text-align: center;
+  padding: var(--space-lg);
+  font-size: .78rem;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ─── Reduced motion ─────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
