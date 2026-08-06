@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Z-Plot Industries sloth symbol concept">
+  <title>Z-Plot Industries — Seven-Sloth Symbol (experimental)</title>
+  <!--
+    zplot-seven-sloth.svg — EXPERIMENTAL / pre-production concept
+    Abstract sloth climbing upward-right; exactly 7 closed filled angular polygons.
+    Palette: #18245F (Deep Navy) · #315ACB (Signal Blue) · #7E92E8 (Periwinkle)
+    Z-movement: raised-arm tip (upper-right) → body (center) → gripping foot (lower-left)
+    No outlines · No gradients · No background · No text · No effects
+    Do NOT replace production logos without explicit approval.
+  -->
+
+  <!-- 1. Head — #315ACB — right-facing hexagonal silhouette -->
+  <polygon points="106,20 144,16 162,34 162,58 140,66 104,60" fill="#315ACB"/>
+
+  <!-- 2. Raised reaching arm — #7E92E8 — extends upper-right (Z top) -->
+  <polygon points="130,60 164,10 185,22 153,72" fill="#7E92E8"/>
+
+  <!-- 3. Back/trailing arm — #18245F — reaches lower-left for grip -->
+  <polygon points="68,90 42,128 56,142 78,106" fill="#18245F"/>
+
+  <!-- 4. Upper torso — #18245F — primary body mass -->
+  <polygon points="90,55 138,62 126,100 83,106" fill="#18245F"/>
+
+  <!-- 5. Lower torso / hip — #315ACB — transitions body to legs -->
+  <polygon points="81,104 128,100 114,140 67,144" fill="#315ACB"/>
+
+  <!-- 6. Upper bent leg — #18245F — bent knee, descends lower-left -->
+  <polygon points="65,142 98,139 86,178 55,175" fill="#18245F"/>
+
+  <!-- 7. Lower leg / gripping foot — #7E92E8 — anchors at lower-left (Z bottom) -->
+  <polygon points="53,173 88,177 80,196 42,194" fill="#7E92E8"/>
+
+</svg>
