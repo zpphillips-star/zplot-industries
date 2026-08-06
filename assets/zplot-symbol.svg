@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="211.0 226.0 614.0 504.0">
+  <title>Z-Plot Industries symbol</title>
+  <path id="wing-upper" fill="#2C3193" d="M 222.00 226.00 L 306.00 368.00 L 478.00 438.00 L 494.55 439.95 A 19.00 19.00 0 0 1 527.60 443.83 L 529.00 444.00 L 586.00 371.00 Z"/>
+  <path id="plane-right" fill="#2D73EC" d="M 518.00 476.00 L 540.00 508.00 L 682.00 508.00 L 825.00 382.00 L 619.00 382.00 Z"/>
+  <path id="plane-left" fill="#9F9DFF" d="M 211.00 509.00 L 407.00 509.00 L 478.00 445.00 L 276.00 445.00 Z"/>
+  <path id="blade-lower" fill="#9F9DFF" d="M 368.00 520.00 L 601.00 730.00 L 598.00 616.00 L 465.00 519.00 Z"/>
+  <path id="sliver" fill="#2C3193" d="M 505.00 476.00 L 473.00 515.00 L 594.00 599.00 Z"/>
+  <path id="keel" fill="#2C3193" d="M 496.00 470.00 L 482.00 454.00 L 421.00 508.00 L 467.00 508.00 Z"/>
+  <circle id="origin" cx="510.0" cy="451.0" r="13.0" fill="#FF7A2E"/>
+</svg>
