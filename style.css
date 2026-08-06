@@ -281,7 +281,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
-  opacity: .25;
+  opacity: .10;
 }
 .hero-orb--1 {
   width: clamp(300px,60vw,700px); height: clamp(300px,60vw,700px);
@@ -293,14 +293,14 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   width: clamp(200px,40vw,500px); height: clamp(200px,40vw,500px);
   top: 30%; right: -10%;
   background: radial-gradient(circle, #2D73EC, #2C3193 60%, transparent);
-  opacity: .15;
+  opacity: .07;
   animation: orb-float 12s ease-in-out infinite reverse;
 }
 .hero-orb--3 {
   width: clamp(150px,30vw,400px); height: clamp(150px,30vw,400px);
   bottom: 10%; left: -5%;
   background: radial-gradient(circle, #1F2E7E, transparent);
-  opacity: .12;
+  opacity: .05;
   animation: orb-float 10s ease-in-out infinite 2s;
 }
 @keyframes orb-float {
@@ -340,15 +340,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   justify-content: center;
 }
 .hero-logo {
-  width: clamp(240px, 60vw, 480px);
+  width: clamp(200px, 52vw, 420px);
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 40px rgba(45,115,236,.35));
-  animation: logo-glow 4s ease-in-out infinite alternate;
-}
-@keyframes logo-glow {
-  from { filter: drop-shadow(0 0 30px rgba(45,115,236,.25)); }
-  to   { filter: drop-shadow(0 0 55px rgba(45,115,236,.55)); }
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,.45));
 }
 .hero-eyebrow {
   display: flex;
@@ -792,8 +787,7 @@ main {
   object-fit: contain;
   position: relative;
   z-index: 3;
-  filter: drop-shadow(0 0 30px rgba(45,115,236,.4));
-  animation: logo-glow 4s ease-in-out infinite alternate;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.45));
 }
 .logo-display-ring {
   position: absolute;
