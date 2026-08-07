@@ -349,16 +349,17 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   gap: clamp(.9rem, 2vw, 1.25rem);
 }
 .hero-logo-wrap {
-  --hero-mark-line-height: clamp(78px, 9.6vw, 116px);
+  --hero-mark-line-height: clamp(92px, 10.8vw, 136px);
   --hero-symbol-height: calc(var(--hero-mark-line-height) * 1.2);
-  --hero-wordmark-bottom-inset: clamp(4px, .55vw, 7px);
+  --hero-line-width: 3px;
+  --hero-wordmark-bottom-inset: 0px;
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 2px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) var(--hero-line-width) minmax(0, 1fr);
   align-items: center;
   justify-content: center;
-  column-gap: clamp(.7rem, 1.55vw, 1.1rem);
-  width: min(100%, clamp(360px, 58vw, 620px));
+  column-gap: clamp(1rem, 2.4vw, 1.65rem);
+  width: min(100%, clamp(430px, 72vw, 760px));
   max-width: calc(100vw - (2 * var(--gap)));
   min-height: var(--hero-symbol-height);
   margin-inline: auto;
@@ -370,10 +371,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   content: "";
   grid-column: 2;
   grid-row: 1;
-  width: 2px;
+  width: var(--hero-line-width);
   height: var(--hero-mark-line-height);
   border-radius: 999px;
   background: linear-gradient(180deg, var(--brand-gold), rgba(108,145,209,.72));
+  box-shadow: 0 0 18px rgba(108,145,209,.22);
   align-self: center;
 }
 .hero-logo-symbol {
@@ -432,10 +434,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     gap: .85rem;
   }
   .hero-logo-wrap {
-    --hero-mark-line-height: clamp(70px, 20vw, 86px);
+    --hero-mark-line-height: clamp(84px, 23vw, 104px);
+    --hero-line-width: 3px;
     --hero-wordmark-bottom-inset: 4px;
-    width: min(calc(100vw - (2 * var(--gap))), 390px);
-    column-gap: clamp(.52rem, 2.8vw, .72rem);
+    width: min(calc(100vw - (2 * var(--gap))), 430px);
+    column-gap: clamp(.72rem, 3.6vw, 1rem);
     min-height: var(--hero-symbol-height);
     padding-inline: 0;
     margin-bottom: .1rem;
@@ -483,8 +486,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     gap: 1rem;
   }
   .hero-logo-wrap {
-    --hero-mark-line-height: 106px;
-    width: min(100%, 510px);
+    --hero-mark-line-height: 126px;
+    width: min(100%, 620px);
     min-height: calc(var(--hero-symbol-height) + 1rem);
     margin-bottom: .15rem;
   }
