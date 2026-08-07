@@ -349,15 +349,15 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(.75rem, 2.4vw, 1.15rem);
-  max-width: min(100%, 460px);
+  gap: clamp(.9rem, 3vw, 1.75rem);
+  max-width: min(100%, 780px);
   margin-inline: auto;
-  padding: .1rem 0 .2rem;
+  padding: .15rem 0 .25rem;
 }
 .hero-logo-symbol {
   flex: 0 0 auto;
   width: auto;
-  height: clamp(50px, 10vw, 82px);
+  height: clamp(62px, 13.5vw, 140px);
   object-fit: contain;
   filter: drop-shadow(0 3px 10px rgba(0,0,0,.38));
 }
@@ -372,7 +372,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 }
 .hero-logo-name {
   display: block;
-  font-size: clamp(2.05rem, 7.2vw, 4.25rem);
+  font-size: clamp(2.65rem, 10.5vw, 7.35rem);
   font-weight: 600;
   line-height: .9;
   letter-spacing: -.055em;
@@ -381,7 +381,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .hero-logo-name span { color: var(--color-signal); }
 .hero-logo-descriptor {
   display: block;
-  font-size: clamp(.58rem, 1.55vw, .92rem);
+  font-size: clamp(.74rem, 2.2vw, 1.45rem);
   font-weight: 600;
   line-height: 1;
   letter-spacing: clamp(.18em, 1.2vw, .34em);
@@ -391,13 +391,13 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 }
 @media (max-width: 420px) {
   .hero-logo-wrap {
-    gap: .65rem;
+    gap: .7rem;
     max-width: 100%;
   }
-  .hero-logo-symbol { height: clamp(48px, 13vw, 54px); }
-  .hero-logo-name { font-size: clamp(1.85rem, 11vw, 2.55rem); }
+  .hero-logo-symbol { height: clamp(52px, 15vw, 62px); }
+  .hero-logo-name { font-size: clamp(2.05rem, 12vw, 3.05rem); }
   .hero-logo-descriptor {
-    font-size: clamp(.52rem, 3vw, .64rem);
+    font-size: clamp(.58rem, 3.3vw, .72rem);
     letter-spacing: .2em;
   }
 }
