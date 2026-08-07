@@ -358,15 +358,16 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   margin-inline: auto;
   margin-bottom: clamp(-.35rem, -.6vw, -.1rem);
   padding: clamp(.2rem, .8vw, .5rem) clamp(.15rem, .8vw, .4rem);
+  transform: translateX(clamp(-34px, -4vw, -18px));
   isolation: isolate;
 }
 .hero-logo-symbol {
   position: relative;
   z-index: 1;
   width: auto;
-  height: clamp(132px, 22vw, 238px);
+  height: clamp(119px, 19.8vw, 214px);
   object-fit: contain;
-  transform: translateX(clamp(-20px, -2.6vw, -10px));
+  transform: translateX(clamp(-32px, -4vw, -18px));
   filter: drop-shadow(0 4px 14px rgba(0,0,0,.42));
 }
 .hero-logo-text {
@@ -426,10 +427,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     min-height: clamp(205px, 58vw, 245px);
     padding-inline: 0;
     margin-bottom: -.2rem;
+    transform: translateX(clamp(-8px, -1.5vw, -3px));
   }
   .hero-logo-symbol {
-    height: clamp(130px, 36vw, 168px);
-    transform: translateX(clamp(-12px, -3vw, -6px));
+    height: clamp(117px, 32.4vw, 151px);
+    transform: translateX(clamp(-16px, -3.5vw, -8px));
   }
   .hero-logo-text {
     right: clamp(.3rem, 5vw, 1rem);
@@ -483,7 +485,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     margin-bottom: -.45rem;
   }
   .hero-logo-symbol {
-    height: 212px;
+    height: 191px;
   }
   .hero-logo-name {
     font-size: 5.15rem;
