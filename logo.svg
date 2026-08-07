@@ -1,22 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="Z-Plot Industries">
-  <!-- Card background -->
-  <rect x="1" y="1" width="46" height="46" rx="9" fill="#12141A" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
-  <!-- Subtle 3x3 grid lines -->
-  <g stroke="rgba(255,255,255,0.07)" stroke-width="1">
-    <line x1="9"  y1="17" x2="39" y2="17"/>
-    <line x1="9"  y1="24" x2="39" y2="24"/>
-    <line x1="9"  y1="31" x2="39" y2="31"/>
-    <line x1="17" y1="9"  x2="17" y2="39"/>
-    <line x1="24" y1="9"  x2="24" y2="39"/>
-    <line x1="31" y1="9"  x2="31" y2="39"/>
-  </g>
-  <!-- Z path: top, diagonal, bottom — dotted (round linecap + 0-dash = circles) -->
-  <line x1="12" y1="12" x2="36" y2="12" stroke="#6366F1" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="0 5.5"/>
-  <line x1="36" y1="12" x2="12" y2="36" stroke="#6366F1" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="0 5.5"/>
-  <line x1="12" y1="36" x2="36" y2="36" stroke="#6366F1" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="0 5.5"/>
-  <!-- Corner nodes (larger anchor dots at each Z vertex) -->
-  <circle cx="12" cy="12" r="3" fill="#6366F1"/>
-  <circle cx="36" cy="12" r="3" fill="#6366F1"/>
-  <circle cx="12" cy="36" r="3" fill="#6366F1"/>
-  <circle cx="36" cy="36" r="3" fill="#6366F1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="50.00 50.00 568.63 900.00">
+  <title>Z-Plot Industries symbol</title>
+  <path id="body" fill="#162B5E" fill-rule="evenodd" d="M 618.63 59.54 L 592.17 50.00 L 515.40 99.01 L 440.80 209.18 L 408.27 154.10 L 317.18 133.28 L 214.82 182.72 L 173.18 272.94 L 162.77 332.80 L 59.98 551.40 L 50.00 694.53 L 143.25 810.77 L 103.35 950.00 L 248.22 855.01 L 281.18 800.36 L 366.63 747.45 L 329.33 723.59 L 404.36 665.47 L 434.29 586.10 L 345.81 538.82 L 448.60 459.45 L 467.25 405.66 L 442.96 386.58 L 462.05 372.70 L 527.98 261.23 Z"/>
+  <path id="shadow-1" fill="#091435" fill-rule="evenodd" d="M 321.52 727.93 L 284.65 756.55 L 303.73 751.35 L 322.39 736.17 Z"/>
+  <path id="shadow-2" fill="#091435" fill-rule="evenodd" d="M 297.23 648.12 L 202.67 710.14 L 125.04 767.83 L 238.24 727.49 L 237.81 722.29 Z"/>
+  <path id="shadow-3" fill="#091435" fill-rule="evenodd" d="M 354.05 526.67 L 345.81 524.51 L 344.07 529.28 L 338.87 528.84 L 334.53 535.35 L 300.27 553.13 L 299.40 557.47 L 288.12 560.94 L 198.77 620.36 L 202.67 622.53 L 342.34 541.42 Z"/>
+  <path id="shadow-4" fill="#091435" fill-rule="evenodd" d="M 456.84 354.05 L 449.47 353.18 L 236.94 482.43 L 250.39 481.57 L 438.63 390.05 L 440.36 383.11 L 456.84 373.57 Z"/>
+  <path id="shadow-5" fill="#091435" fill-rule="evenodd" d="M 170.14 297.23 L 171.01 311.54 L 167.11 312.84 L 169.71 317.18 L 163.20 333.66 L 176.22 362.29 L 267.30 337.13 Z"/>
+  <path id="shadow-6" fill="#091435" fill-rule="evenodd" d="M 426.48 189.23 L 416.94 192.70 L 415.64 207.88 L 429.08 216.12 L 417.81 261.23 L 410.00 269.04 L 398.72 272.07 L 359.69 298.53 L 269.47 333.23 L 278.58 334.10 L 292.46 326.72 L 421.28 292.02 L 442.96 234.34 L 439.06 211.78 L 425.61 196.60 Z"/>
+  <path id="steel-1" fill="#223A75" fill-rule="evenodd" d="M 276.84 800.36 L 207.88 788.22 L 120.27 901.42 L 107.25 943.93 L 248.65 851.98 Z"/>
+  <path id="steel-2" fill="#223A75" fill-rule="evenodd" d="M 309.37 749.61 L 344.07 754.82 L 354.92 742.24 L 329.76 731.40 Z"/>
+  <path id="steel-3" fill="#223A75" fill-rule="evenodd" d="M 237.81 769.57 L 295.93 790.39 L 328.02 762.63 L 302.87 752.65 L 276.84 761.33 L 280.75 750.92 L 265.13 750.92 L 264.70 747.01 L 284.22 744.84 L 281.61 737.47 L 274.67 740.94 L 276.41 733.57 L 268.17 735.73 L 253.42 730.53 L 248.22 744.41 L 264.70 747.01 L 245.18 752.22 Z"/>
+  <path id="steel-4" fill="#223A75" fill-rule="evenodd" d="M 409.57 574.82 L 354.92 610.82 L 380.51 634.24 L 393.95 667.20 L 403.93 662.00 L 431.25 588.70 Z"/>
+  <path id="steel-5" fill="#223A75" fill-rule="evenodd" d="M 63.45 560.51 L 52.60 694.10 L 138.92 658.96 Z"/>
+  <path id="steel-6" fill="#223A75" fill-rule="evenodd" d="M 463.78 405.23 L 437.33 392.22 L 342.77 441.23 L 463.35 410.43 Z"/>
+  <path id="steel-7" fill="#223A75" fill-rule="evenodd" d="M 161.47 338.87 L 151.93 366.19 L 186.63 482.87 L 279.01 435.59 L 280.31 431.69 L 263.40 417.37 L 184.46 365.76 L 175.78 364.02 Z"/>
+  <path id="mid-1" fill="#3A61AF" fill-rule="evenodd" d="M 404.36 571.78 L 342.34 543.59 L 275.11 585.23 L 350.14 609.95 Z"/>
+  <path id="mid-2" fill="#3A61AF" fill-rule="evenodd" d="M 150.19 368.80 L 146.29 369.23 L 66.92 544.02 L 184.46 485.04 Z"/>
+  <path id="mid-3" fill="#3A61AF" fill-rule="evenodd" d="M 518.43 264.27 L 379.64 307.64 L 379.20 340.60 L 391.78 365.76 L 390.92 374.00 L 397.42 377.47 L 409.13 374.43 L 459.45 344.94 L 499.35 295.49 L 508.02 278.14 L 519.30 269.47 Z"/>
+  <path id="light-1" fill="#6C91D1" fill-rule="evenodd" d="M 240.84 725.76 L 211.78 786.05 L 274.24 797.33 L 290.72 792.99 L 234.77 770.87 L 245.61 733.57 L 245.18 725.76 Z"/>
+  <path id="light-2" fill="#6C91D1" fill-rule="evenodd" d="M 347.11 610.39 L 269.90 586.53 L 144.55 657.66 L 205.28 707.11 Z"/>
+  <path id="light-3" fill="#6C91D1" fill-rule="evenodd" d="M 373.13 311.54 L 187.93 361.86 L 291.59 434.29 L 63.01 550.10 L 141.08 654.19 L 353.61 516.70 L 234.34 479.40 L 395.69 380.94 Z"/>
+  <path id="amber-1" fill="#FBAC0A" fill-rule="evenodd" d="M 409.57 168.84 L 368.36 158.00 L 285.52 206.14 L 256.46 256.46 L 364.89 183.59 L 413.04 198.77 L 416.07 189.23 Z"/>
+  <path id="cream-1" fill="#EDF1EE" fill-rule="evenodd" d="M 425.61 216.99 L 407.40 208.75 L 410.87 199.20 L 401.76 195.73 L 370.96 236.07 L 320.22 262.10 L 377.47 282.48 L 413.47 262.10 Z"/>
 </svg>

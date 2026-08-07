@@ -4,25 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Z-Plot Industries — an independent software studio building apps people actually use. From craft beer discovery to live sports scores, we craft digital experiences for real life." />
-  <meta name="theme-color" content="#141A3C" />
+  <meta name="theme-color" content="#060B1C" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Z-Plot Industries — Apps Built for Real Life" />
   <meta property="og:description" content="Independent software studio crafting apps that matter — sports scores, craft beer, children's picture books, fishing guides, and more." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://zplotindustries.com" />
+  <meta property="og:image" content="https://zplotindustries.com/assets/zplot-lockup-dark-2400.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <title>Z-Plot Industries — Apps Built for Real Life</title>
 
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
-  <link rel="apple-touch-icon" href="assets/zplot-app-icon.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/zplot-app-icon.svg" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/zplot-favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/zplot-favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/zplot-favicon-48.png" />
+  <link rel="apple-touch-icon" href="assets/zplot-app-icon-1024.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -31,7 +33,7 @@
   <nav class="site-nav" id="site-nav" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo" aria-label="Z-Plot Industries — home">
-        <img src="assets/zplot-symbol.svg" alt="Z-Plot Industries mark" class="nav-logo-img" width="32" height="32" />
+        <img src="assets/zplot-symbol.svg" alt="Z-Plot Industries mark" class="nav-logo-img" width="30" height="40" />
         <span class="nav-wordmark"><span class="nav-z">Z</span>-Plot</span>
       </a>
       <ul class="nav-links" role="list">
@@ -65,8 +67,8 @@
           src="assets/zplot-lockup-dark.svg"
           alt="Z-Plot Industries"
           class="hero-logo"
-          width="480"
-          height="190"
+          width="560"
+          height="332"
         />
       </div>
 
@@ -462,7 +464,7 @@
       </div>
       <div class="philosophy-visual" aria-hidden="true">
         <div class="logo-display">
-          <img src="assets/zplot-symbol.svg" alt="" class="logo-display-img" width="200" height="200" />
+          <img src="assets/zplot-symbol.svg" alt="" class="logo-display-img" width="140" height="140" />
           <div class="logo-display-ring logo-display-ring--1"></div>
           <div class="logo-display-ring logo-display-ring--2"></div>
           <div class="logo-display-ring logo-display-ring--3"></div>
@@ -511,7 +513,7 @@
   <footer class="site-footer" aria-label="Site footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="assets/zplot-symbol.svg" alt="Z-Plot Industries" class="footer-logo" width="36" height="36" loading="lazy" />
+        <img src="assets/zplot-symbol.svg" alt="Z-Plot Industries" class="footer-logo" width="32" height="42" loading="lazy" />
         <div>
           <div class="footer-name"><span class="nav-z">Z</span>-Plot Industries</div>
           <div class="footer-tagline">Made with ☕ in Washington State</div>
@@ -571,7 +573,7 @@
       });
     });
 
-    // App card accent glow on hover
+    // App card accent wash on hover
     document.querySelectorAll('.app-card[data-accent]').forEach(card => {
       const accent = card.dataset.accent;
       const glow = card.querySelector('.app-card-glow');

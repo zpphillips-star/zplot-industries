@@ -4,7 +4,7 @@ One-page app directory for Z-Plot Industries, served via **GitHub Pages** at [zp
 
 ## Tech stack
 
-Plain HTML5 + CSS custom properties. No build step, no npm, no framework. Edit and ship directly.
+Plain HTML5 + CSS custom properties. No build step, no npm, no framework. Edit and ship directly. Branding assets live in `assets/` and were sourced from the local `files.zip` package.
 
 ---
 
@@ -21,7 +21,7 @@ Canonical public domains are used where available. Vercel deployment URLs are re
 | Woodinville | *(TBD — no repo detected)* | 🚧 TODO |
 | CastWA | https://castwa.com | ✅ Live |
 | Scorpanion | https://scorpanion.com | ✅ Live |
-| WCScores | https://world-cup-2026-gray.vercel.app | ✅ Live |
+| WCScores | https://wcscores.com | ✅ Live |
 
 > **Woodinville app URL** — no repo was found under `zpphillips-star` at time of site creation. Update the `href` in `index.html` and remove the `card--todo` class when the app is ready.
 
@@ -109,8 +109,8 @@ npx serve .
 
 1. Open `index.html`
 2. Find the card for the app you want to update
-3. Change the `href` attribute on the `<a class="card">` element
-4. Remove `card--todo` class and the `<span class="badge">Coming Soon</span>` when ready
+3. Change the `href` attribute on the relevant app CTA/link
+4. Remove the coming-soon card styling/badge when ready
 5. Commit and push — GitHub Pages deploys automatically within ~30 seconds
 
 ---
@@ -121,6 +121,7 @@ npx serve .
 zplot-industries/
 ├── index.html   # Main (and only) page
 ├── style.css    # All styles — mobile-first, custom properties
+├── assets/      # App icons and Z-Plot brand assets
 ├── CNAME        # Custom domain: zplotindustries.com
 └── README.md    # This file
 ```
