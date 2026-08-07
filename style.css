@@ -352,7 +352,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   --hero-mark-line-height: clamp(92px, 10.8vw, 136px);
   --hero-symbol-height: calc(var(--hero-mark-line-height) * 1.2);
   --hero-line-width: 3px;
-  --hero-wordmark-bottom-inset: 0px;
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) var(--hero-line-width) minmax(0, 1fr);
@@ -399,11 +398,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-end;
-  align-self: end;
+  justify-content: center;
+  align-self: center;
   text-align: left;
   gap: clamp(.18rem, .42vw, .28rem);
-  transform: translateY(calc((var(--hero-mark-line-height) * -0.1) - var(--hero-wordmark-bottom-inset)));
 }
 .hero-logo-name {
   display: block;
@@ -436,7 +434,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   .hero-logo-wrap {
     --hero-mark-line-height: clamp(84px, 23vw, 104px);
     --hero-line-width: 3px;
-    --hero-wordmark-bottom-inset: 4px;
     width: min(calc(100vw - (2 * var(--gap))), 430px);
     column-gap: clamp(.72rem, 3.6vw, 1rem);
     min-height: var(--hero-symbol-height);
