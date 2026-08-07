@@ -349,54 +349,61 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   gap: clamp(.9rem, 2vw, 1.25rem);
 }
 .hero-logo-wrap {
+  --hero-mark-line-height: clamp(78px, 9.6vw, 116px);
+  --hero-symbol-height: calc(var(--hero-mark-line-height) * 1.2);
   position: relative;
   display: grid;
-  place-items: center;
-  width: min(100%, clamp(340px, 50vw, 600px));
+  grid-template-columns: auto 2px auto;
+  align-items: center;
+  justify-content: center;
+  column-gap: clamp(.7rem, 1.55vw, 1.1rem);
+  width: min(100%, clamp(330px, 48vw, 540px));
   max-width: calc(100vw - (2 * var(--gap)));
-  min-height: clamp(205px, 29vw, 318px);
+  min-height: calc(var(--hero-symbol-height) + clamp(.8rem, 2vw, 1.25rem));
   margin-inline: auto;
-  margin-bottom: clamp(-.35rem, -.6vw, -.1rem);
-  padding: clamp(.2rem, .8vw, .5rem) clamp(.15rem, .8vw, .4rem);
-  transform: translateX(clamp(-34px, -4vw, -18px));
+  margin-bottom: clamp(.15rem, .7vw, .45rem);
+  padding: clamp(.25rem, .9vw, .55rem) clamp(.1rem, .7vw, .35rem);
+  transform: translateX(clamp(-26px, -3vw, -12px));
   isolation: isolate;
 }
+.hero-logo-wrap::before {
+  content: "";
+  grid-column: 2;
+  grid-row: 1;
+  width: 2px;
+  height: var(--hero-mark-line-height);
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--brand-gold), rgba(108,145,209,.72));
+  align-self: center;
+}
 .hero-logo-symbol {
+  grid-column: 1;
+  grid-row: 1;
   position: relative;
   z-index: 1;
   width: auto;
-  height: clamp(119px, 19.8vw, 214px);
+  height: var(--hero-symbol-height);
   object-fit: contain;
-  transform: translateX(clamp(-32px, -4vw, -18px));
+  align-self: center;
+  justify-self: end;
   filter: drop-shadow(0 4px 14px rgba(0,0,0,.42));
 }
 .hero-logo-text {
-  position: absolute;
+  grid-column: 3;
+  grid-row: 1;
+  position: relative;
   z-index: 2;
-  right: clamp(.3rem, 2.2vw, 1.5rem);
-  bottom: clamp(.25rem, 1.7vw, 1rem);
   min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   text-align: left;
-  gap: clamp(.2rem, .55vw, .32rem);
-  padding-left: clamp(.75rem, 1.4vw, 1rem);
-}
-.hero-logo-text::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: .18em;
-  bottom: .08em;
-  width: 2px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, var(--brand-gold), rgba(108,145,209,.72));
+  gap: clamp(.18rem, .42vw, .28rem);
 }
 .hero-logo-name {
   display: block;
-  font-size: clamp(2.9rem, 7vw, 5.75rem);
+  font-size: clamp(2.55rem, 5.2vw, 4.25rem);
   font-weight: 600;
   line-height: .9;
   letter-spacing: -.05em;
@@ -406,10 +413,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .hero-logo-name span { color: var(--color-signal); }
 .hero-logo-descriptor {
   display: block;
-  font-size: clamp(.72rem, 1.55vw, 1.14rem);
+  font-size: clamp(.64rem, 1.25vw, .92rem);
   font-weight: 600;
   line-height: 1;
-  letter-spacing: clamp(.2em, .9vw, .32em);
+  letter-spacing: clamp(.18em, .62vw, .26em);
   text-transform: uppercase;
   color: var(--color-periwinkle);
   padding-left: .08em;
@@ -423,24 +430,18 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     gap: .85rem;
   }
   .hero-logo-wrap {
-    width: min(calc(100vw - (2 * var(--gap))), 370px);
-    min-height: clamp(205px, 58vw, 245px);
+    --hero-mark-line-height: clamp(70px, 20vw, 86px);
+    width: min(calc(100vw - (2 * var(--gap))), 350px);
+    column-gap: clamp(.52rem, 2.8vw, .72rem);
+    min-height: calc(var(--hero-symbol-height) + 1rem);
     padding-inline: 0;
-    margin-bottom: -.2rem;
-    transform: translateX(clamp(-8px, -1.5vw, -3px));
+    margin-bottom: .1rem;
+    transform: translateX(clamp(-10px, -2vw, -4px));
   }
-  .hero-logo-symbol {
-    height: clamp(117px, 32.4vw, 151px);
-    transform: translateX(clamp(-16px, -3.5vw, -8px));
-  }
-  .hero-logo-text {
-    right: clamp(.3rem, 5vw, 1rem);
-    bottom: clamp(.2rem, 2.7vw, .7rem);
-  }
-  .hero-logo-name { font-size: clamp(2.55rem, 13vw, 3.55rem); }
+  .hero-logo-name { font-size: clamp(2.15rem, 10vw, 2.9rem); }
   .hero-logo-descriptor {
-    font-size: clamp(.64rem, 3.25vw, .82rem);
-    letter-spacing: .22em;
+    font-size: clamp(.55rem, 2.55vw, .68rem);
+    letter-spacing: .18em;
   }
 }
 .hero-eyebrow {
@@ -480,18 +481,16 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     gap: 1rem;
   }
   .hero-logo-wrap {
-    width: min(100%, 540px);
-    min-height: 284px;
-    margin-bottom: -.45rem;
-  }
-  .hero-logo-symbol {
-    height: 191px;
+    --hero-mark-line-height: 106px;
+    width: min(100%, 510px);
+    min-height: calc(var(--hero-symbol-height) + 1rem);
+    margin-bottom: .15rem;
   }
   .hero-logo-name {
-    font-size: 5.15rem;
+    font-size: 3.9rem;
   }
   .hero-logo-descriptor {
-    font-size: 1.02rem;
+    font-size: .86rem;
   }
   .hero-headline {
     font-size: 4.75rem;
