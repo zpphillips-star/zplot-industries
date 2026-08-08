@@ -914,9 +914,9 @@ main {
   width: min(580px, 96vw); height: min(580px, 96vw);
 }
 .logo-display-img {
-  width: auto; height: auto;
+  /* Explicit height drives the size — max-* alone never grows an auto-sized img */
+  width: auto; height: min(460px, 78vw);
   max-width: min(460px, 78vw);
-  max-height: min(460px, 78vw);
   object-fit: contain;
   position: relative;
   z-index: 3;
