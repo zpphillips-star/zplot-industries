@@ -911,11 +911,12 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 280px; height: 280px;
+  width: min(580px, 96vw); height: min(580px, 96vw);
 }
 .logo-display-img {
-  width: auto; height: 132px;
-  max-width: 120px;
+  width: auto; height: auto;
+  max-width: min(460px, 78vw);
+  max-height: min(460px, 78vw);
   object-fit: contain;
   position: relative;
   z-index: 3;
@@ -927,9 +928,9 @@ main {
   border: 1px solid rgba(108,145,209,.18);
   animation: ring-pulse 3s ease-in-out infinite;
 }
-.logo-display-ring--1 { width: 180px; height: 180px; animation-delay: 0s; }
-.logo-display-ring--2 { width: 230px; height: 230px; animation-delay: .5s; }
-.logo-display-ring--3 { width: 280px; height: 280px; animation-delay: 1s; }
+.logo-display-ring--1 { width: min(480px, 80vw); height: min(480px, 80vw); animation-delay: 0s; }
+.logo-display-ring--2 { width: min(530px, 88vw); height: min(530px, 88vw); animation-delay: .5s; }
+.logo-display-ring--3 { width: min(580px, 96vw); height: min(580px, 96vw); animation-delay: 1s; }
 @keyframes ring-pulse {
   0%,100% { opacity: .3; transform: scale(1); }
   50%      { opacity: .1; transform: scale(1.03); }
