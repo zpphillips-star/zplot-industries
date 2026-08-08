@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <title>Z-Plot Industries app icon</title>
   <rect width="512" height="512" fill="#060B1C"/>
-  <g transform="translate(88.843 6) scale(0.5)">
+  <g transform="translate(82.156 -4) scale(0.52)">
     <path id="body" fill="#162B5E" fill-rule="evenodd" d="M 618.63 59.54 L 592.17 50.00 L 515.40 99.01 L 440.80 209.18 L 408.27 154.10 L 317.18 133.28 L 214.82 182.72 L 173.18 272.94 L 162.77 332.80 L 59.98 551.40 L 50.00 694.53 L 143.25 810.77 L 103.35 950.00 L 248.22 855.01 L 281.18 800.36 L 366.63 747.45 L 329.33 723.59 L 404.36 665.47 L 434.29 586.10 L 345.81 538.82 L 448.60 459.45 L 467.25 405.66 L 442.96 386.58 L 462.05 372.70 L 527.98 261.23 Z"/>
     <path id="shadow-1" fill="#091435" fill-rule="evenodd" d="M 321.52 727.93 L 284.65 756.55 L 303.73 751.35 L 322.39 736.17 Z"/>
     <path id="shadow-2" fill="#091435" fill-rule="evenodd" d="M 297.23 648.12 L 202.67 710.14 L 125.04 767.83 L 238.24 727.49 L 237.81 722.29 Z"/>
