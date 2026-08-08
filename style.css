@@ -350,7 +350,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 }
 .hero-logo-wrap {
   --hero-mark-line-height: clamp(92px, 10.8vw, 136px);
-  --hero-symbol-height: calc(var(--hero-mark-line-height) * 1.296);
+  --hero-symbol-height: calc(var(--hero-mark-line-height) * 1.1664);
   --hero-line-width: 3px;
   position: relative;
   display: grid;
